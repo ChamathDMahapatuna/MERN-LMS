@@ -17,7 +17,7 @@ const App = () => {
       <Route path="/course/create" element={<CreateCourse />} />
       <Route path="/course/delete/:id" element={<DeleteCourse />} />
       <Route path="/course/edit/:id" element={<UpdateCourse />} />
-      <Route path="/course/details/:id" element={<ShowCourse />} />
+      <Route path="/course/details/" element={<ShowCourse />} />
     </Routes>
     <Footer />
     </div>
