@@ -1,9 +1,4 @@
-import React from 'react'
-
-function UpdateCourse() {
-  return (
-    <div>UpdateCourse</div>
-  )
+import React from 'react';
+export default function UpdateCourse() {
+  return <div className="p-8 text-center">Update Course Page (implement form here)</div>;
 }
-
-export default UpdateCourse

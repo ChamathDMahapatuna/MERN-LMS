@@ -1,61 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const Navbar = ({ userRole }) => {
+import React from 'react';
+import { Link } from 'react-router-dom';
+export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <div className="text-lg font-bold">
-        <Link to="/">LMS</Link>
+    <nav className="w-full flex items-center justify-between px-8 py-4 bg-blue-600 text-white mb-8">
+      <div className="font-bold text-xl">LMS</div>
+      <div className="space-x-4">
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/courses" className="hover:underline">Courses</Link>
+        <Link to="/course/create" className="hover:underline">Add Course</Link>
       </div>
-      <ul className="flex space-x-4">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/courses">Courses</Link>
-        </li>
-        {userRole === 'Student' && (
-          <>
-            <li>
-              <Link to="/my-courses">My Courses</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-          </>
-        )}
-        {userRole === 'Admin' && (
-          <>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/manage-courses">Manage Courses</Link>
-            </li>
-            <li>
-              <Link to="/manage-users">Manage Users</Link>
-            </li>
-          </>
-        )}
-        {!userRole && (
-          <>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
-          </>
-        )}
-        {userRole && (
-          <li>
-            <button className="bg-red-500 px-3 py-1 rounded" onClick={() => console.log('Logout')}>
-              Logout
-            </button>
-          </li>
-        )}
-      </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}

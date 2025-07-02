@@ -4,7 +4,9 @@ import mongoose from 'mongoose';
 import courseRoutes from './routes/courseRoutes.js';
 import cors from 'cors';
 
+
 const app = express();
+app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.use('/course', courseRoutes);
