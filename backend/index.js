@@ -10,14 +10,14 @@ app.use(express.json()); // Middleware to parse JSON bodies
 app.use('/course', courseRoutes);
 
 
-// mongoose.connect(MongoDBURL).then(() => {
-//   console.log('Connected to MongoDB!');
+mongoose.connect(MongoDBURL).then(() => {
+   console.log('Connected to MongoDB!');
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
   });
-// } ).catch((error) => {
-//   console.log('Error connecting to MongoDB: ', error);
-// });
+} ).catch((error) => {
+   console.log('Error connecting to MongoDB: ', error);
+});
 
 
 

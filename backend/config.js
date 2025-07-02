@@ -1,3 +1,3 @@
 export const PORT = 3000;
-export const MongoDBURL = 'mongodb+srv://chamathmahapatuna2000:zo3gXxKMr5BKwfcs@books-store-mern.5k4ejim.mongodb.net/?retryWrites=true&w=majority&appName=Books-Store-MERN';
-
+// GOOD (uses 'mernlms' database)
+export const MongoDBURL = 'mongodb+srv://chamath:mahapatuna@mernlms.owutdsi.mongodb.net/mernlms?retryWrites=true&w=majority&appName=MERNLMS';
